@@ -1,0 +1,9 @@
+# INSTRUCTION VALUE1 VALUE2
+FROM ubantu:22.04
+LABEL kalpeshkumavat
+RUN apt update
+RUN apt install apache2 -y
+RUN echo "<h1> HELLO WORLD </h1>" /var/www/html/index.html
+EXPOSE 80
+CMD httpd -DFOREGROUND
+
